@@ -7,15 +7,23 @@ names_f = open("names",  "r")
 surnames_f = open("surnames",  "r")
 
 for line in names_f:
-    names.append(line)
-for line in surnames_f:
-    surnames.append(line)
+    names.append(line[0:-1])
 
-def get_surname():
-    return random.choice(names)
+for line in surnames_f:
+    surnames.append(line[0:-1])
 
 def get_name():
-    return random.choice(surnames)
-    
+    return random.choice(names)[0:-1]
+
+def get_surname(name):
+    sur = random.choice(surnames)
+    if name.endswith('a'):
+        if(sur.endswith('i')): 
+	    sur = sur[0:-1] + 'a'
+        return sur
+    else:
+        return sur
+
 for i in range(100):
-    print(get_name() + " " + get_surname())
+    name = get_name()
+    print(name + " " + get_surname(name))
