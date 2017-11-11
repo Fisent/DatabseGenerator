@@ -1,4 +1,5 @@
 import random
+import psycopg2
 
 names = []
 surnames = []
@@ -27,3 +28,9 @@ def get_surname(name):
 for i in range(100):
     name = get_name()
     print(name + " " + get_surname(name))
+
+
+try:
+    conn = psycopg2.connect("dbname='template1' user='dbuser'm host='localhost' password='pass'")
+except:
+    print "I am unable to connect to the database"
