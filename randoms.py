@@ -52,7 +52,7 @@ def get_rejestracja():
         rejestracja += random.choice(string.ascii_lowercase)
     return rejestracja
 
-def get_choroba():
+def get_schorzenie():
     file = open("choroby.txt", mode="r")
     lines = []
     for line in file:
@@ -61,6 +61,7 @@ def get_choroba():
             lines.append(line)
     return random.choice(lines)
 
-def get_typ_choroby(choroba):
-    return 0
+def get_typ_schorzenia(choroba):
+    return choroba[0]
+
 

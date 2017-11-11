@@ -1,20 +1,27 @@
+﻿TODO
+	prawdziwe rejestracje
+	adresy(na razie każdy ma wartość "adres") - w zgloszeniu i szpitalu
+	pozycje (na razie każda ma wartość "pozycja") - w zgloszeniu i szpitalu
+	id choroby, oddzielić od opisu
+
+
 tabele do generowania:
-    Pracownik(imie, nazwisko, dataUrodzenia(data od 1950 do 1990))
-    Dyzur(idKaretki(0-500), poczatekDyzuru(data+czas od 2000), koniecDyzuru(poczatek + 8h), pozycja wspolrzedne)
-    PracownikNaDyzurze(idPracownika(0-99), idRoli(0-2))
-    Karetka(typKaretki(0-4), rejestracja, dostepnosc(bool), waznoscPrzegladu(data od 2018 do 2025))
-    WyposazenieWKaretce(idWyposazenia(0-14), idKaretka(0-99))
-    Zgloszenie()
-    DyzurDoZgloszenia(idDyzur(0-4999), idZgloszenia())
+    +Pracownik(imie, nazwisko, dataUrodzenia(data od 1950 do 1990))
+    +Dyzur(idKaretki(0-500), poczatekDyzuru(data+czas od 2000), koniecDyzuru(poczatek + 8h), pozycja wspolrzedne)
+    +PracownikNaDyzurze(idPracownika(0-99), idRoli(0-2))
+    +Karetka(typKaretki(0-4), rejestracja, dostepnosc(bool), waznoscPrzegladu(data od 2018 do 2025))
+    +WyposazenieWKaretce(idWyposazenia(0-14), idKaretka(0-99))
+    +DyzurDoZgloszenia(idDyzur(0-4999), idZgloszenia())
 
-    Szpital(adres, pozycja)
-    Schorzenie(idSchorzenia(z pliku), nazwaSchorzenia(z pliku))
-    TypSchorzenia(id(znak, od A do Z, pierwsza litera id schorzenia))
-    OddziałySzpitalu(idSzpital(0,29), idTypSchorzenia(znak od "A" do "Z"))
-    TypKaretkiDoSchorzenia(TypKaretki(0-4), IdTypSchorzenia(znak od "A" do "Z"))
+    +Szpital(adres, pozycja)
+    +Schorzenie(idSchorzenia(z pliku), nazwaSchorzenia(z pliku))
+    +TypSchorzenia(id(znak, od A do Z, pierwsza litera id schorzenia))
+    +OddziałySzpitalu(idSzpital(0,29), idTypSchorzenia(znak od "A" do "Z"))
+    +TypKaretkiDoSchorzenia(TypKaretki(0-4), IdTypSchorzenia(znak od "A" do "Z"))
 
-    Zgloszenie(Adres, pozycja, opis)
-    Poszkodowany(idZgloszenia)
+    +Zgloszenie(Adres, pozycja, opis)
+    +Poszkodowany(idZgloszenia)
+    SchorzeniePoszkodowanego(idPoszkodowanego(0-20000), idSchorzenia())
 
 tabele do ręcznego wypełnienia:
     Rola (3)
@@ -42,3 +49,5 @@ ile:
     24 typySchorzenia
     ileś tam schorzeń(tyle ile w pliku)
     jeszcze więcej typKaretkiDoSchorzenia
+
+

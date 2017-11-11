@@ -1,4 +1,6 @@
 import randoms
+import string
+import random
 
 def get_pracownik():
     imie = randoms.get_name()
@@ -27,4 +29,19 @@ def get_szpital():
     return ("adres", "pozycja")
 
 def get_schorzenie():
-    return
+    return (randoms.get_schorzenie())
+
+def get_typ_schorzenia():
+    return (randoms.get_typ_schorzenia())
+
+def get_oddzialy_szpitalu():
+    return (randoms.get_number(0, 5000), random.choice(string.ascii_lowercase))
+
+def get_typ_karetki_do_schorzenia():
+    return (randoms.get_number(0, 5), random.choice(string.ascii_lowercase))
+
+def get_poszkodowany():
+    return (randoms.get_number(0, 10000), "", "")
+
+def get_schorzenie_poszkodowanego():
+    return (randoms.get_number(0, 20000), randoms.get_schorzenie())
