@@ -1,3 +1,4 @@
+<<<<<<< 41e0dab65078e7d3f8a53960831e8fe25abf259b
 import randoms
 
 def get_pracownik():
@@ -28,3 +29,7 @@ def get_szpital():
 
 def get_schorzenie():
     return
+=======
+class Lekarz:
+    pass
+>>>>>>> commit
