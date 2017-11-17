@@ -33,8 +33,8 @@ tabele do ręcznego wypełnienia:
 ile:
     3 role
     100 karetek
-    300 pracowników
-    5000 dyżurów
+    300 pracownikówdyżurów
+    5000
     15000 pracownikNaDyzurze
     5 typów karetek
     15 wyposazen

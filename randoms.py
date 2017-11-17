@@ -59,9 +59,26 @@ def get_schorzenie():
         line = line.strip()
         if line != "":
             lines.append(line)
-    return random.choice(lines)
+    schorzenie = random.choice(lines)
+
+    return (schorzenie.split(";"))[0]
 
 def get_typ_schorzenia(choroba):
     return choroba[0]
 
+def get_random_location():
+    lat = 50 + random.random() * 4
+    lng = 15 + random.random() * 8
+    return (str(lat) + " " + str(lng))
+
+def get_adres():
+    f = open("wszystkie_adresy_2470.txt", "r")
+    tab = []
+    for line in f:
+        splitted = line.split(" ")
+        a = ""
+        for i in range(2, len(splitted)):
+            a+=splitted[i] + " "
+        tab.append(a)
+    return random.choice(tab)
 
